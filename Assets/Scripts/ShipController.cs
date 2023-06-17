@@ -9,27 +9,27 @@ public class ShipController : MonoBehaviour
     [SerializeField]private ShipColliderController shipColl;
     public Action OnGameOver;
     
-    private Vector3 newPosition;
-    private Quaternion newRotation;
+    public Vector3 newPosition;
+    public Vector3 newRotation;
    
     private void Awake()
     {
        
         newPosition = transform.position;
-        newRotation = transform.rotation;
+        newRotation = transform.localEulerAngles;
         shipColl.OnShipHit = ShipHit;
     }
 
     public void UpdatePosition()
     {
         var curPos = transform.position;
-        transform.position = Vector3.Lerp(curPos,newPosition,2f);
+        transform.position = Vector3.Lerp(curPos,newPosition,Time.deltaTime*100);
     }
 
     public void UpdateRotation()
     {
-        var curRotation = transform.rotation;
-        transform.rotation = Quaternion.Lerp(curRotation, newRotation, 60f);
+        var curRotation = transform.localEulerAngles;
+        transform.localEulerAngles = Vector3.Lerp(curRotation, newRotation, 60f);
     }
     
 

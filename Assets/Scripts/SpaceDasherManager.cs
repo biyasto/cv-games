@@ -6,7 +6,7 @@ public class SpaceDasherManager : MonoBehaviour
 {
     [SerializeField] private ShipController ship;
     [SerializeField] private EnemyController enemy;
-    
+    [SerializeField] private FaceController face;
     private bool isGameOver;
     void Start()
     {
@@ -24,9 +24,14 @@ public class SpaceDasherManager : MonoBehaviour
     {
         
         if (isGameOver) return;
+        
+        face.UpdateFace();
+        ship.newPosition = face.Position;
+        ship.newRotation = new Vector3(0, 0, face.Rotation);
         ship.UpdatePosition();
         ship.UpdateRotation();
         enemy.UpdatePositionEnemyList();
+        
         Debug.Log("Updated");
         
     }

@@ -185,6 +185,8 @@ GameObject:
   m_Component:
   - component: {fileID: 320719350}
   - component: {fileID: 320719349}
+  - component: {fileID: 320719351}
+  - component: {fileID: 320719352}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -206,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1739140293}
   enemy: {fileID: 948153423}
+  face: {fileID: 320719352}
 --- !u!4 &320719350
 Transform:
   m_ObjectHideFlags: 0
@@ -221,6 +224,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &320719351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320719348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2f4e2c207f4af39f036136fceb1160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 5052
+  startReceiving: 1
+  printToConsole: 0
+  data: 
+--- !u!114 &320719352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320719348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4ea50a7ef0463cb741b40074af13df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sen: {x: 8, y: 5}
+  StartPoint: {x: 4, y: 2}
+  udpReceive: {fileID: 320719351}
+  Position: {x: 0, y: 0, z: 0}
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &523666021
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &523666022
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -552,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &1019741357
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -746,6 +782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipColl: {fileID: 520121}
+  newPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1739140294
 Transform:
   m_ObjectHideFlags: 0
