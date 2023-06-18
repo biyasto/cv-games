@@ -28,8 +28,16 @@ public class FaceController : MonoBehaviour
     {
         string data = udpReceive.data;
         if(data==null) return;
-        data = data.Remove(0, 1);
-        data = data.Remove((data.Length - 1), 1);
+        try
+        {
+            data = data.Remove(0, 1);
+            data = data.Remove((data.Length - 1), 1);
+        }
+        catch
+        {
+            return;
+        }
+       
         string[] pos = data.Split(',');
         
         //middle     

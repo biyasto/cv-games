@@ -23,13 +23,13 @@ public class ShipController : MonoBehaviour
     public void UpdatePosition()
     {
         var curPos = transform.position;
-        transform.position = Vector3.Lerp(curPos,newPosition,Time.deltaTime*100);
+        transform.position = Vector3.Lerp(curPos,newPosition,Time.deltaTime*20);
     }
 
     public void UpdateRotation()
     {
         var curRotation = transform.localEulerAngles;
-        transform.localEulerAngles = Vector3.Lerp(curRotation, newRotation, 60f);
+        transform.localEulerAngles = Vector3.Lerp(curRotation, newRotation, 20f);
     }
     
 
