@@ -76,5 +76,14 @@
                 }
             }
         }
-    
+
+        private void OnApplicationQuit()
+        {
+            //KillProcesses();
+        }
+
+        private void OnDestroy()
+        {
+            KillProcesses();
+        }
     }
