@@ -25,31 +25,14 @@
         // Start is called before the first frame update
         void Start()
         {
-            KillProcesses();
-            
-            ProcessStartInfo info = new ProcessStartInfo(Application.dataPath + "/StreamingAssets/face.bat");
-            info.WindowStyle = ProcessWindowStyle.Hidden;
-            Process proc = Process.Start(info);
-            
-            
+          
             
             receiveThread = new Thread(
                 new ThreadStart(ReceiveData));
             receiveThread.IsBackground = true;
             receiveThread.Start();
         }
-
-        private void KillProcesses()
-        {
-            foreach (var process in Process.GetProcessesByName("cmd"))
-            {
-                process.Kill();
-            }
-            foreach (var process in Process.GetProcessesByName("python"))
-            {
-                process.Kill();
-            }
-        }
+        
 
         private void ReceiveData()
         {
@@ -77,13 +60,5 @@
             }
         }
 
-        private void OnApplicationQuit()
-        {
-            //KillProcesses();
-        }
-
-        private void OnDestroy()
-        {
-            KillProcesses();
-        }
+      
     }
