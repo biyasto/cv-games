@@ -23,7 +23,7 @@ public class UDPThread : MonoBehaviour
             KillProcesses();
             
             ProcessStartInfo info = new ProcessStartInfo(Application.dataPath + path);
-            info.WindowStyle = ProcessWindowStyle.Hidden;
+            //info.WindowStyle = ProcessWindowStyle.Hidden;
             Process proc = Process.Start(info);
             
         }

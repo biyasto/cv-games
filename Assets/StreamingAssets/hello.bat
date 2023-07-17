@@ -1,3 +1,3 @@
-@ECHO OFF
-ECHO Hello World
-PAUSE
+@echo off
+python "%~dp0TestHandModel.py"
+pause
