@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Gameplay.NeonSaber.Scripts;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SaberController : MonoBehaviour
 {
     
     //[SerializeField]private ShipColliderController shipColl;
-   // public Action OnGameOver;
-    
+    public Action onGameOver;
+    public Action onHit;
     public Vector3 newPosition;
     
    public Vector3 newRotation;
-   
+   [SerializeField]public int saberType;
     private void Awake()
     {
        
@@ -21,6 +23,7 @@ public class SaberController : MonoBehaviour
        // shipColl.OnShipHit = ShipHit;
     }
 
+    
     public void UpdatePosition()
     {
         var curPos = transform.position;
@@ -39,6 +42,16 @@ public class SaberController : MonoBehaviour
        // Debug.Log("call Game Over");
         //OnGameOver?.Invoke();
     }
-    
-   
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Food")
+        {
+            if(other.gameObject.GetComponent<FoodData>().type==2)
+                onGameOver?.Invoke();
+            if(other.gameObject.GetComponent<FoodData>().type==saberType)
+                onHit?.Invoke();
+            other.gameObject.GetComponent<FoodData>().type = -1;
+        }
+    }
 }

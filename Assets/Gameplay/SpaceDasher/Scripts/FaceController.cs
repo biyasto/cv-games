@@ -13,6 +13,8 @@ public class FaceController : MonoBehaviour
     public Vector3  Position;
     public Vector3  startPos;
     public float  Rotation;
+
+    public bool isStarted = false;
     //public GameObject FacePoint;
 
    // private Vector3 originPos;
@@ -21,11 +23,21 @@ public class FaceController : MonoBehaviour
     {
         startPos = new Vector3(0, 2, -5);
         Position = startPos;
+        udpReceive = GameObject.Find("UDP5052").GetComponent<UDPReceive>();
     }
 
     // Update is called once per frame
+    public void ReadyFaceCheck()
+    {
+        if (!isStarted)
+        {
+            if (udpReceive.isReceived)
+                isStarted = true;
+        }
+    }
     public void UpdateFace()
     {
+       
         string data = udpReceive.data;
         if(data==null) return;
         try
@@ -41,7 +53,7 @@ public class FaceController : MonoBehaviour
         string[] pos = data.Split(',');
         
         //middle     
-        float x = -float.Parse(pos[0]) * Sen.x + StartPoint.x;
+        float x = float.Parse(pos[0]) * Sen.x + StartPoint.x;
         float y = -float.Parse(pos[1]) * Sen.y + StartPoint.y;
 
         
@@ -51,7 +63,7 @@ public class FaceController : MonoBehaviour
       
         
         Position =startPos + new Vector3(x,y,0);
-        Rotation = 180-Angle(point2 - point1);
+        Rotation = -(180-Angle(point2 - point1));
         // print(Angle( new Vector2(1,0)));
     }
     

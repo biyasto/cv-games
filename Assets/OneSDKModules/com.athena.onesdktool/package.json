@@ -1,0 +1,23 @@
+{
+  "name": "com.athena.onesdktool",
+  "version": "1.0.7",
+  "displayName": "One SDK Tool",
+  "description": "",
+  "unity": "2019.4",
+  "documentationUrl": "https://example.com/",
+  "licensesUrl": "https://example.com/licensing.html",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  },
+  "author": {
+    "name": "OneSDK",
+    "email": "support@athena.studio",
+    "url": "https://athena.studio"
+  },
+  "keywords": [
+    "one",
+    "sdk",
+    "tool"
+  ],
+  "hideInEditor": false
+}

@@ -549,7 +549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &234785799
 Transform:
   m_ObjectHideFlags: 0
@@ -677,6 +677,22 @@ PrefabInstance:
       propertyPath: m_Text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 247478916681398525, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 320719349}
+    - target: {fileID: 247478916681398525, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 247478916681398525, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceDasherManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 602979095141368996, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2342801784178078898, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_SizeDelta.x
       value: -571.4116
@@ -684,6 +700,18 @@ PrefabInstance:
     - target: {fileID: 2342801784178078898, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 189.7038
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466895550348197119, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 320719349}
+    - target: {fileID: 2466895550348197119, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466895550348197119, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceDasherManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2648064874948122493, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_Name
@@ -696,6 +724,10 @@ PrefabInstance:
     - target: {fileID: 2695400206034182599, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264786216499687471, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3596072914805019256, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_Text
@@ -849,11 +881,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ee133de45b2e54db80d644da804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameName: Space-Dasher
+  MenuGameName: Menu_SD
+  PauseMenu: {fileID: 1969328832}
+  OverMenu: {fileID: 997763659}
   ship: {fileID: 1739140293}
   enemy: {fileID: 948153423}
   face: {fileID: 320719352}
   pointUI: {fileID: 2052926772}
   timerUI: {fileID: 204910794}
+  udpReceive_sign: {fileID: 0}
 --- !u!4 &320719350
 Transform:
   m_ObjectHideFlags: 0
@@ -877,13 +914,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320719348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2f4e2c207f4af39f036136fceb1160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   port: 5052
   startReceiving: 1
+  isReceived: 0
   printToConsole: 0
   data: '[0.5, 0.5, 0.5, 0.4, 0.5, 0.6]'
 --- !u!114 &320719352
@@ -899,11 +937,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sen: {x: 8, y: 5}
-  StartPoint: {x: 4, y: 2}
-  udpReceive: {fileID: 320719351}
+  StartPoint: {x: -3.5, y: 2}
+  udpReceive: {fileID: 0}
   Position: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
   Rotation: 0
+  isStarted: 0
 --- !u!1 &320826045
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
       propertyPath: m_Text
-      value: '01 : 23'
+      value: 00:00
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2219,6 +2258,26 @@ PrefabInstance:
       propertyPath: m_Text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 247478916681398525, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 320719349}
+    - target: {fileID: 247478916681398525, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 247478916681398525, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceDasherManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 602979095141368996, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806164043773262793, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2342801784178078898, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_SizeDelta.x
       value: -571.4116
@@ -2226,6 +2285,18 @@ PrefabInstance:
     - target: {fileID: 2342801784178078898, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 189.7038
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466895550348197119, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 320719349}
+    - target: {fileID: 2466895550348197119, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466895550348197119, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceDasherManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2648064874948122493, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_Name
@@ -2238,6 +2309,10 @@ PrefabInstance:
     - target: {fileID: 2695400206034182599, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264786216499687471, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3596072914805019256, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_Text
@@ -2349,6 +2424,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -154
       objectReference: {fileID: 0}
+    - target: {fileID: 7403597592795782925, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8509820572684851008, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
       propertyPath: m_Text
       value: Continue
@@ -2359,6 +2438,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3839618382864119760, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
   m_PrefabInstance: {fileID: 964339064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &997763659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2648064874948122493, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+  m_PrefabInstance: {fileID: 306990726}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1019741356
 GameObject:
@@ -2814,6 +2898,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1937845085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 571442587591072401, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+  m_PrefabInstance: {fileID: 964339064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1937845087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937845085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1937845088}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 320719348}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1937845088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5372130881886213112, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+  m_PrefabInstance: {fileID: 964339064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937845085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1954447330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,6 +3061,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954447330}
   m_CullTransparentMesh: 0
+--- !u!1 &1969328832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2648064874948122493, guid: 550f4b4e3d71da54190e6b03aa3f63d3, type: 3}
+  m_PrefabInstance: {fileID: 964339064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2052926770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,7 +3137,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SCORE: 19'
+  m_Text: 'SCORE: 0'
 --- !u!222 &2052926773
 CanvasRenderer:
   m_ObjectHideFlags: 0

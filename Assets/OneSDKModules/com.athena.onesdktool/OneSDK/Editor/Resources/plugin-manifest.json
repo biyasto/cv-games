@@ -1,0 +1,266 @@
+{
+    "Plugins": [
+        {
+            "Id": "athena_gameops",
+            "Name": "Athena GameOps",
+            "Version": "1.0.3",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/athena-gameops-v1.0.3.unitypackage",
+            "ContentManifest": [
+                "Athena"
+            ]
+        },
+        {
+            "Id": "adjust",
+            "Name": "Adjust",
+            "Version": "4.29.4",
+            "DownloadUrl": "https://github.com/adjust/unity_sdk/releases/download/v4.29.4/Adjust_v4.29.4.unitypackage",
+            "ContentManifest": [
+                "Adjust"
+            ]
+        },
+        {
+            "Id": "adjust_purchase",
+            "Name": "Adjust Purchase",
+            "Version": "1.0.3",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/AdjustPurchase_v1.0.3.unitypackage",
+            "ContentManifest": [
+                "AdjustPurchase"
+            ]
+        },
+        {
+            "Id": "audience_network",
+            "Name": "Audience Network",
+            "Version": "6.11.1",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/audience-network-unity-sdk-6.11.1.unitypackage",
+            "ContentManifest": [
+                "AudienceNetwork"
+            ]
+        },
+        {
+            "Id": "appsflyer",
+            "Name": "AppsFlyer",
+            "Version": "6.4.4",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/appsflyer-unity-plugin-6.4.4.unitypackage",
+            "ContentManifest": [
+                "AppsFlyer"
+            ]
+        },
+        {
+            "Id": "firebase_analytics",
+            "Name": "Firebase Analytics",
+            "Version": "9.1.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/FirebaseAnalytics_9.1.0.unitypackage",
+            "ContentManifest": [
+                "Editor Default Resources",
+                "Firebase",
+                "Parse",
+                "Plugins/iOS/Firebase/libFirebaseCppAnalytics.a",
+                "Plugins/iOS/Firebase/libFirebaseCppApp.a",
+                "Plugins/iOS/Firebase"
+            ]
+        },
+        {
+            "Id": "firebase_auth",
+            "Name": "Firebase Auth",
+            "Version": "9.1.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/FirebaseAuth_9.1.0.unitypackage",
+            "ContentManifest": [
+                "Editor Default Resources",
+                "Firebase",
+                "Parse",
+                "Plugins/iOS/Firebase/libFirebaseCppApp.a",
+                "Plugins/iOS/Firebase/libFirebaseCppAuth.a",
+                "Plugins/iOS/Firebase"
+            ]
+        },
+        {
+            "Id": "firebase_crashlytics",
+            "Name": "Firebase Crashlytics",
+            "Version": "9.1.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/FirebaseCrashlytics_9.1.0.unitypackage",
+            "ContentManifest": [
+                "Editor Default Resources",
+                "Firebase",
+                "Parse",
+                "Plugins/iOS/Firebase/libCrashlyticsiOSWrapper.a",
+                "Plugins/iOS/Firebase/libFirebaseCppApp.a",
+                "Plugins/iOS/Firebase/libFirebaseCppCrashlytics.a",
+                "Plugins/iOS/Firebase"
+            ]
+        },
+        {
+            "Id": "firebase_database",
+            "Name": "Firebase Database",
+            "Version": "9.1.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/FirebaseDatabase_9.1.0.unitypackage",
+            "ContentManifest": [
+                "Editor Default Resources",
+                "Firebase",
+                "Parse",
+                "Plugins/iOS/Firebase/libFirebaseCppApp.a",
+                "Plugins/iOS/Firebase/libFirebaseCppAuth.a",
+                "Plugins/iOS/Firebase/libFirebaseCppDatabase.a",
+                "Plugins/iOS/Firebase"
+            ]
+        },
+        {
+            "Id": "firebase_remote_config",
+            "Name": "Firebase Remote Config",
+            "Version": "9.1.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/FirebaseRemoteConfig_9.1.0.unitypackage",
+            "ContentManifest": [
+                "Editor Default Resources",
+                "Firebase",
+                "Parse",
+                "Plugins/iOS/Firebase/libFirebaseCppApp.a",
+                "Plugins/iOS/Firebase/libFirebaseCppRemoteConfig.a",
+                "Plugins/iOS/Firebase"
+            ]
+        },
+        {
+            "Id": "flurry",
+            "Name": "Flurry",
+            "Version": "4.2.0",
+            "DownloadUrl": "https://github.com/flurry/unity-flurry-sdk/raw/master/flurry-sdk-4.2.0.unitypackage",
+            "ContentManifest": [
+                "Plugins/Android/flurry-analytics.aar",
+                "Plugins/FlurrySDK",
+                "Plugins/iOS/Flurry+Event.h",
+                "Plugins/iOS/Flurry.h",
+                "Plugins/iOS/FlurryCCPA.h",
+                "Plugins/iOS/FlurryConsent.h",
+                "Plugins/iOS/FlurrySessionBuilder.h",
+                "Plugins/iOS/FlurrySKAdNetwork.h",
+                "Plugins/iOS/FlurryUnityPlugin.h",
+                "Plugins/iOS/FlurryUnityPlugin.mm",
+                "Plugins/iOS/FlurryUserProperties.h",
+                "Plugins/iOS/libFlurry.a"
+            ]
+        },
+        {
+            "Id": "google_admob",
+            "Name": "Google AdMob",
+            "Version": "6.1.2",
+            "DownloadUrl": "https://github.com/googleads/googleads-mobile-unity/releases/download/v6.1.2/GoogleMobileAds-v6.1.2.unitypackage",
+            "ContentManifest": [
+                "GoogleMobileAds",
+                "Plugins/Android/googlemobileads-unity.aar",
+                "Plugins/Android/GoogleMobileAdsPlugin.androidlib",
+                "Plugins/iOS/GADUAdNetworkExtras.h",
+                "Plugins/iOS/unity-plugin-library.a"
+            ]
+        },
+        {
+            "Id": "max_sdk",
+            "Name": "Max SDK",
+            "Version": "5.5.2",
+            "DownloadUrl": "https://artifacts.applovin.com/unity/com/applovin/applovin-sdk/AppLovin-MAX-Unity-Plugin-5.5.2-Android-11.5.2-iOS-11.5.1.unitypackage",
+            "ContentManifest": [
+                "MaxSdk"
+            ]
+        },
+        {
+            "Id": "mazon_plugin",
+            "Name": "Amazon Plugin",
+            "Version": "1.4.3",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/APS_Core_1.4.3.unitypackage",
+            "ContentManifest": [
+                "Amazon"
+            ]
+        },
+        {
+            "Id": "save_progress",
+            "Name": "Save Progress [Beta version]",
+            "Version": "1.0.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/SaveProgress_v1_0_0.unitypackage",
+            "ContentManifest": [
+                "SaveProgressSDK"
+            ]
+        },
+        {
+            "Id": "save_progress v2",
+            "Name": "Save Progress V2 [Beta version]",
+            "Version": "1.0.2",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/onesdk_saveprogress_system_1.0.2-beta.unitypackage",
+            "ContentManifest": [
+                "OneSDKModules/SaveProgressSystem"
+            ]
+        },
+        {
+            "Id": "playfab",
+            "Name": "PlayFab",
+            "Version": "Latest",
+            "DownloadUrl": "https://raw.githubusercontent.com/PlayFab/UnitySDK/versioned/Packages/UnitySDK.unitypackage",
+            "ContentManifest": [
+                "PlayFabSDK"
+            ]
+        },
+        {
+            "Id": "playfab_editor_extensions",
+            "Name": "PlayFab Editor Extensions",
+            "Version": "Latest",
+            "DownloadUrl": "https://raw.githubusercontent.com/PlayFab/UnitySDK/master/Packages/PlayFabEditorExtensions.unitypackage",
+            "ContentManifest": [
+                "PlayFabEditorExtensions"
+            ]
+        },
+        {
+            "Id": "apple_signin_unity",
+            "Name": "Sign in with apple",
+            "Version": "1.4.2",
+            "DownloadUrl": "https://github.com/lupidan/apple-signin-unity/releases/download/v1.4.2/AppleSignInUnity.unitypackage",
+            "ContentManifest": [
+                "AppleAuth",
+                "AppleAuthSample"
+            ]
+        },
+        {
+            "Id": "facebook_sdk",
+            "Name": "Facebook SDK",
+            "Version": "11.0.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/facebook-unity-sdk-11.0.0.unitypackage",
+            "ContentManifest": [
+                "FacebookSDK"
+            ]
+        },
+        {
+            "Id": "athena_att_package",
+            "Name": "Athena ATT Package [Beta version]",
+            "Version": "1.0.1-rc01",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/ATTPackage_v1_0_0.unitypackage",
+            "ContentManifest": [
+                "AppTrackingTransparency"
+            ]
+        },
+        {
+            "Id": "com.athena.onesdktool.iap-system",
+            "Name": "IAP System [Beta version]",
+            "PluginType": 0,
+            "Version": "1.0.1",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/onesdk-tools-iapsystem-1.0.1-beta.unitypackage",
+            "ContentManifest": [
+                "OneSDKModules/IAPSystem"
+            ]
+        },
+        {
+            "Id": "com.athena.onesdktool.qa-build-report",
+            "Name": "QA Build Report [Beta version]",
+            "PluginType": 0,
+            "Version": "1.0.2",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/onesdk_qareport_1.0.2-beta.unitypackage",
+            "ContentManifest": [
+                "OneSDKModules/QABuildReprort"
+            ]
+        },
+        {
+            "Id": "com.athena.onesdktool.addressables",
+            "Name": "Addressable Manager [Beta version]",
+            "PluginType": 0,
+            "Version": "1.0.0",
+            "DownloadUrl": "https://storage.googleapis.com/one-sdk/plugins/onesdk-addressable-manager-1.0.0-beta.unitypackage",
+            "ContentManifest": [
+                "OneSDKModules/AddressableManager"
+            ]
+        }
+    ]
+}

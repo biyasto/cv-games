@@ -18,7 +18,7 @@
         public  int port = 5099;
 
         public bool startReceiving = true;
-
+        public bool isReceived = false;
         public bool printToConsole = false;
 
         public string data="[0.5, 0.5, 0.5, 0.4, 0.5, 0.6]";
@@ -26,7 +26,7 @@
         void Start()
         {
           
-            
+          
             receiveThread = new Thread(
                 new ThreadStart(ReceiveData));
             receiveThread.IsBackground = true;
@@ -52,9 +52,17 @@
                     {
                         Debug.Log("Something went wrong chief -> try restart camera");
                     }
+
+                    if (!isReceived)
+                    {
+                        isReceived = true;
+                        Debug.Log("udp ready");
+                        
+                    }
                 }
                 catch (Exception err)
                 {
+                    print("no data");
                     print(err.ToString());
                 }
             }
